@@ -9,20 +9,25 @@ jobs:
   deploy:
     runs-on: ubuntu-latest
     steps:
+      # Шаг 1: Клонирование репозитория
       - name: Checkout repository
         uses: actions/checkout@v3
         with:
           persist-credentials: false
-          submodules: recursive
+          submodules: recursive  # Убедитесь, что это включено, если у вас есть подмодули
 
+      # Шаг 2: Установка Hugo Extended
       - name: Setup Hugo
-        uses: peaceiris/actions-hugo@v3
+        uses: peaceiris/actions-hugo@v2
         with:
           hugo-version: 'latest'
+          extended: true  # Указываем использование Hugo Extended
 
+      # Шаг 3: Компиляция сайта
       - name: Build the website
         run: hugo --minify
 
+      # Шаг 4: Публикация на GitHub Pages
       - name: Deploy to GitHub Pages
         uses: peaceiris/actions-gh-pages@v3
         with:
