@@ -1,6 +1,5 @@
 name: Deploy Hugo site to GitHub Pages
 
-# Запускаем workflow при пуше в ветку main
 on:
   push:
     branches:

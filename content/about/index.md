@@ -1,5 +1,5 @@
 ---
-title: "О нас"
+title: "О себе"
 type: "about"
 draft: false
 ---
