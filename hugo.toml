@@ -1,4 +1,4 @@
 [[menu.main]]
-name = "О нас"
+name = "О себе"
 url = "/about/"
 weight = 2
