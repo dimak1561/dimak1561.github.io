@@ -1,6 +1,6 @@
 ---
 title: "О себе"
-type: "about"
+url: "/about/"
 draft: false
 ---
 
