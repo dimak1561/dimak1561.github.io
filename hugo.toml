@@ -2,3 +2,5 @@
 name = "О себе"
 url = "/about/"
 weight = 2
+[params]
+mainSections = ["post"]
