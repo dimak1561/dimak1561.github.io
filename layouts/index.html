@@ -1,34 +1,16 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    {{ partial "head.html" . }}
-</head>
-<body>
-    <header>
-        <h1>{{ .Title }}</h1>
-        <p>{{ .Description }}</p>
-    </header>
+---
+title: "Главная страница"
+draft: false
+---
 
-    <main>
-        <h2>Другие страницы</h2>
-        <ul>
-            {{ range .Site.RegularPages }}
-                <li>
-                    <a href="{{ .RelPermalink }}">{{ .Title }}</a>
-                </li>
-            {{ end }}
-        </ul>
+# Добро пожаловать на мой сайт
 
-        <h2>Список постов</h2>
-        <ul>
-            {{ range .Site.Pages }}
-                {{ if eq .Type "post" }}
-                    <li>
-                        <a href="{{ .Permalink }}">{{ .Title }}</a>
-                    </li>
-                {{ end }}
-            {{ end }}
-        </ul>
-    </main>
-</body>
-</html>
+Ниже представлены последние посты:
+
+{{ range .Site.RegularPages }}
+    <ul>
+        <li>
+            <a href="{{ .Permalink }}">{{ .Title }}</a>
+        </li>
+    </ul>
+{{ end }}
