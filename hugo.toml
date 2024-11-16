@@ -3,7 +3,7 @@ languageCode = "ru"
 title = "Мой сайт"                       
 theme = "ananke"                         
 buildDrafts = false                    
-disableKinds = ["RSS"]
+
 
 [params]                                 
   author = "Ваше имя"
