@@ -16,7 +16,7 @@ jobs:
     - name: Set up Hugo
       uses: peaceiris/actions-hugo@v2
       with:
-        hugo-version: "0.136.5"
+        hugo-version: "latest"
 
     - name: Build the site
       run: hugo --minify --baseURL https://dimak1561.github.io
