@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Посты</title>
+    <link rel="stylesheet" href="/css/style.css"> <!-- Укажите правильный путь -->
+</head>
+<body>
+    <header>
+        <h1>Посты</h1>
+        <nav>
+            <a href="/">Главная</a>
+            <a href="/about/">О себе</a>
+        </nav>
+    </header>
+
+    <main>
+        <ul>
+            {{ range .Pages }} <!-- Перебор всех постов -->
+            <li>
+                <a href="{{ .RelPermalink }}">{{ .Title }}</a> <!-- Ссылка на пост -->
+                <p>{{ .Summary }}</p> <!-- Краткое описание поста -->
+            </li>
+            {{ end }}
+        </ul>
+    </main>
+
+    <footer>
+        <p>&copy; {{ now.Year }} Ваше имя</p>
+    </footer>
+</body>
+</html>
