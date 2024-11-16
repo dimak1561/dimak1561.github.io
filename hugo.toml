@@ -6,7 +6,7 @@ buildDrafts = false
 
 
 [params]                                 
-  author = "Ваше имя"
+  author = "Karmanov Dmitrii"
   description = "Описание вашего сайта"
   showReadingTime = true                 
   showPostNavLinks = true
