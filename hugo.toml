@@ -1,7 +1,27 @@
-[[menu.main]]
-name = "О себе"
-url = "/about/"
+baseURL = "https://dimak1561.github.io/"
+languageCode = "ru"                      
+title = "Мой сайт"                       
+theme = "ananke"                         
+buildDrafts = false                    
 
-weight = 2
-[params]
-mainSections = ["post"]
+[params]                                 
+  author = "Ваше имя"
+  description = "Описание вашего сайта"
+  showReadingTime = true                 
+  showPostNavLinks = true
+
+[menu]                                   
+  [[menu.main]]
+    name = "Главная"
+    url = "/"
+    weight = 1
+
+  [[menu.main]]
+    name = "О себе"
+    url = "/about/"
+    weight = 2
+
+  [[menu.main]]
+    name = "Блог"
+    url = "/post/"
+    weight = 3

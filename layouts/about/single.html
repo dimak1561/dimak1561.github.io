@@ -1,19 +1,25 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    {{ partial "head.html" . }}
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{{ .Title }}</title>
+    {{ partial "head.html" . }} 
 </head>
 <body>
-    <header>
-        <h1>{{ .Title }}</h1>
-    </header>
-    
+    {{ partial "header.html" . }} 
+
     <main>
-        {{ .Content }}
+        <article>
+            <header>
+                <h1>{{ .Title }}</h1>
+                <p>{{ .Date.Format "2 January 2006" }}</p>
+            </header>
+            <section>
+                {{ .Content }} 
+            </section>
+        </article>
     </main>
-    
-    <footer>
-        <p>Меня зовут Дима</p>
-    </footer>
+    {{ partial "footer.html" . }}
 </body>
 </html>
