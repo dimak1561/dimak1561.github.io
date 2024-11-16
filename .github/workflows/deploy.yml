@@ -6,17 +6,17 @@ on:
       - main
 
 jobs:
-  build-deploy:
+  build:
     runs-on: ubuntu-latest
 
     steps:
     - name: Checkout code
-      uses: actions/checkout@v3
+      uses: actions/checkout@v2
 
     - name: Set up Hugo
       uses: peaceiris/actions-hugo@v2
       with:
-        hugo-version: "latest" 
+        hugo-version: "0.136.5"
 
     - name: Build the site
       run: hugo --minify --baseURL https://dimak1561.github.io
@@ -26,3 +26,4 @@ jobs:
       with:
         github_token: ${{ secrets.GITHUB_TOKEN }}
         publish_dir: ./public
+	targer-branch: gh-pages
