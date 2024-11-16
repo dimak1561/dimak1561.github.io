@@ -1,7 +1,7 @@
 [[menu.main]]
 name = "О себе"
 url = "/about/"
-baseURL = "https://dimak1561.github.io/"
+
 weight = 2
 [params]
 mainSections = ["post"]
