@@ -4,7 +4,6 @@ title = "Мой сайт"
 theme = "ananke"                         
 buildDrafts = false                    
 
-
 [params]                                 
   author = "Karmanov Dmitrii"
   description = "Описание сайта"
