@@ -19,7 +19,7 @@ jobs:
         hugo-version: "latest"
 
     - name: Build the site
-      run: hugo --minify --baseURL https://dimak1561.github.io
+      run: hugo --minify
 
     - name: Deploy to GitHub Pages
       uses: peaceiris/actions-gh-pages@v3
